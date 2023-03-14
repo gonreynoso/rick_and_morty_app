@@ -1,8 +1,16 @@
-export default function SearchBar(props) {
+// import characters from "../data";
+
+export default function SearchBar({ onSearch }) {
    return (
       <div>
-         {/* <input type='search' />
-      <button onClick={}>Agregar</button> */}
+         <input type='search' />
+         <button
+            onClick={(id) => {
+               onSearch(id)
+            }}
+         >
+            Agregar
+         </button>
       </div>
    );
 }
