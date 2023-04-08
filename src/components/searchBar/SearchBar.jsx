@@ -1,4 +1,7 @@
-// import characters from "../data";
+import React from 'react';
+
+
+
 
 export default function SearchBar({ onSearch }) {
    return (
@@ -8,9 +11,7 @@ export default function SearchBar({ onSearch }) {
             onClick={(id) => {
                onSearch(id)
             }}
-         >
-            Agregar
-         </button>
+         >Agregar</button>
       </div>
    );
 }

@@ -1,7 +1,4 @@
-.App {
-   text-align: center;
-}
-
-html{
-   background-color: darkslategray;
+.App{
+ display: flex;
+ flex-direction: row;
 }

@@ -20,14 +20,12 @@ const characters = [
     gender: "Female",
     image: "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
   },
-];
-
-export const Rick = {
-  id: 1,
+  {
+    id: 1,
   name: "Rick Sanchez",
   species: "Human",
   gender: "Male",
   image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-};
-
+  },
+]
 export default characters;

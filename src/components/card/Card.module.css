@@ -1,0 +1,8 @@
+.container {
+  background-color: (139, 139, 177);
+  width: fit-content;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgb(65, 62, 62);
+  text-shadow: 6px 4px 7px black;
+}
