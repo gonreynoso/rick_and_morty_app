@@ -1,7 +1,9 @@
 import React from "react";
 import SearchBar from "../searchBar/SearchBar";
 
+// eslint-disable-next-line
 class Nav extends React.Component {
+ // eslint-disable-next-line
  constructor(props) {
   super(props)
  }
@@ -9,7 +11,7 @@ class Nav extends React.Component {
  render() {
   return (
    <div>
-    <SearchBar />
+    <SearchBar onSearch={this.props.onSearch} />
    </div >
   )
  }
