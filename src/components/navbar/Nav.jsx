@@ -13,8 +13,10 @@ class Nav extends React.Component {
   return (
    <div>
     <SearchBar onSearch={this.props.onSearch} />
-    <Link to={"../about/About.jsx"}>About</Link>
-    <Link>Home</Link>
+    <Link to={"/about"}>
+     <h3>About</h3>
+    </Link>
+    <Link to={"/home"}><h3>Home</h3></Link>
    </div >
   )
  }

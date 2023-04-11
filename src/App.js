@@ -3,6 +3,8 @@ import Nav from "./components/navbar/Nav.jsx"
 import React from 'react';
 import { useState } from "react";
 import { Route, Routes } from 'react-router-dom'
+import About from "./components/about/About.jsx"
+import Detail from "./components/detail/Detail.jsx"
 
 
 export default function App() {
@@ -42,7 +44,17 @@ export default function App() {
   return (
     <div>
       <Nav onSearch={onSearch} />
-      <Cards characters={characters} onClose={onClose} />
+      <Routes>
+        <Route path="/home" 
+        element={<Cards characters={characters} onClose={onClose} />} />
+
+        <Route path="./components/about/About.jsx" 
+        element={<About />} />
+        
+        <Route path="./detail/:detailId" 
+        element={<Detail />} />
+      </Routes>
+
     </div>
   )
 }
