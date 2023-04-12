@@ -18,6 +18,7 @@ export default function App() {
 
     const KEY = "208915502015.5ad33e85904a79bab279"
 
+    //  METODO FETCH PARA PEDIR DATOS DE LA API
     fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
 
       .then((response) => response.json())
@@ -48,10 +49,10 @@ export default function App() {
         <Route path="/home" 
         element={<Cards characters={characters} onClose={onClose} />} />
 
-        <Route path="./components/about/About.jsx" 
+        <Route path="/about" 
         element={<About />} />
         
-        <Route path="./detail/:detailId" 
+        <Route path="/detail/:detailId" 
         element={<Detail />} />
       </Routes>
 

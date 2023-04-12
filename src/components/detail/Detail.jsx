@@ -1,18 +1,41 @@
-import {useParams  } from "react-router-dom";
-import { useState } from "react";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import axios from "axios";
 
+export default function Detail() {
 
-export default function Detail (){
- const params = useParams()
- return(
-  <div>
-   <h2>Nombre</h2>
-   <p>Status</p>
-   <p>Specie</p>
-   <p>Gender</p>
-   <p>Origin</p>
-   <p>Imagen</p>
-  </div>
- )
+    const { detailId } = useParams()
 
+    const [character, setCharacter] = useState({})
+
+    useEffect(() => {
+
+        const URL_BASE = "https://be-a-rym.up.railway.app/api"
+        const KEY = "208915502015.5ad33e85904a79bab279"
+
+        axios(`${URL_BASE}/character/${detailId}?key=${KEY}`)
+            .then((response) => setCharacter(response.data))
+    }, [])
+
+    return (
+
+        < div >
+            {
+                character.name ?
+                    (<>
+                        <h2>{character.name}</h2>
+                        <p>{character.status}</p>
+                        <p>{character.species}</p>
+                        <p>{character.gender}</p>
+                        <p>{character.origin?.name}</p>
+                        <img src={character.image} alt="imagen tarjetas" />
+                    </>) : (
+                        <img src="../../../public/rick-and-morty-dance.gif" alt="" />
+                    )
+
+            }
+
+        </div>
+
+    )
 }
