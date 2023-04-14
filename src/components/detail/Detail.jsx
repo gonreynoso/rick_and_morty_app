@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import axios from "axios";
+// import img from "../../components/rick-and-morty-dance.gif"
 
 export default function Detail() {
 
@@ -30,7 +31,7 @@ export default function Detail() {
                         <p>{character.origin?.name}</p>
                         <img src={character.image} alt="imagen tarjetas" />
                     </>) : (
-                        <img src="../../../public/rick-and-morty-dance.gif" alt="" />
+                        // <img src={img} alt="" />
                     )
 
             }
