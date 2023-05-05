@@ -4,7 +4,7 @@ const server = express();
 const PORT = 3001;
 
 server.listen(PORT, () => {
-   console.log('Server raised in port: ' + PORT);
+   console.log('Server raised in port:' + PORT);
 });
 
 //[::1]:3001/rickandmorty/characters/10 para el thunderClient

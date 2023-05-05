@@ -1,7 +1,6 @@
 const axios = require("axios");
-const KEY = "208915502015.5ad33e85904a79bab279";
-const URL = "https://be-a-rym.up.railway.app/api";
-
+// require('dotenv').config();
+// const express = require('express');
 
 const successH = (response, res) => {
  const { id, image, name, gender, species } = response.data
